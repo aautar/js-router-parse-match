@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <script src="parse-and-match.js"></script>
+        <script type="text/javascript">
+
+            console.log(parseAndMatch("/rez/{id}", "/rez/x"));
+            console.log(parseAndMatch("/rez/{id}", "/rez/256"));
+            console.log(parseAndMatch("/resource/{id}/action", "/resource/zi2/action?p=1"));
+            console.log(parseAndMatch("/resource/{id}/action", "/resource/a7027532-9e04-4629-9523-ed81b7b41fb7/action?p=1"));
+            console.log(parseAndMatch("/infoz/{id}", "/resource/a7027532-9e04-4629-9523-ed81b7b41fb7/action?p=1"));
+            console.log(parseAndMatch("/resource/{id}/action/{action}", "/resource/zi2/action/dump?p=1"));
+            console.log(parseAndMatch("/resource/{id}/action/{action}", "/resource/zi2/action/dump/"));
+            console.log(parseAndMatch("/multi-{id}:{action}", "/multi-dog:"));
+
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
